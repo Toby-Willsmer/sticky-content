@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta name="author" content="Toby Willsmer">
+  <title>Sticky scroll</title>
+  <link href="sticky-scroll.css" rel="stylesheet"/>
+</head>
+<body>
+      
+  <header>
+    <h1 class="max-width">Sticky scroll element</h1>
+  </header>
+  <main class="max-width sticky-wrapper">
+    <div class="left">
+      <h2>Not sticky content</h2>
+      <p>Scroll the page and the 'sticky-cell' inside the <code>aside</code> element on the right will stick the top of the page, then stop once it reaches the bottom of it's wrapping element 'sticky-wrapper'</p>
+      <ul>
+        <li>This method only adds / removes classes</li>
+        <li>There are no inline calculations made by js</li>
+        <li>The offset height for the header is calculated in js</li>
+        <li>Uses media query to reset positioninng on mobile</li>
+        <li>Happy scrolling</li>
+      </ul>
+      <h3>Some more content</h3>
+      <p>Tri-tip brisket ball tip chuck flank meatloaf andouille jowl sirloin pork loin doner bacon drumstick. Venison strip steak porchetta beef ribs cow, frankfurter spare ribs. Turducken shank bresaola venison. Cow venison tri-tip, turkey filet mignon brisket tongue sirloin flank beef ribs. Meatball swine corned beef, andouille leberkas hamburger jowl pork chop turkey chuck beef ribs cow sirloin. Porchetta prosciutto salami andouille.
+      <br/>Ham hock brisket pork tail jerky, short ribs salami prosciutto tenderloin meatloaf bresaola. Pastrami kielbasa pork belly fatback bresaola, bacon pig ham hock turducken rump drumstick shoulder pork loin tail. Porchetta jowl shank corned beef short ribs sausage jerky doner frankfurter ribeye hamburger pork belly. Tenderloin ball tip prosciutto pork turkey ground round filet mignon cow sirloin strip steak. Pork belly drumstick ball tip tenderloin pancetta porchetta jowl ham hock tail shank tri-tip.
+      </p>
+      <p>Tri-tip brisket ball tip chuck flank meatloaf andouille jowl sirloin pork loin doner bacon drumstick. Venison strip steak porchetta beef ribs cow, frankfurter spare ribs. Turducken shank bresaola venison. Cow venison tri-tip, turkey filet mignon brisket tongue sirloin flank beef ribs. Meatball swine corned beef, andouille leberkas hamburger jowl pork chop turkey chuck beef ribs cow sirloin. Porchetta prosciutto salami andouille.
+      <br/>Ham hock brisket pork tail jerky, short ribs salami prosciutto tenderloin meatloaf bresaola. Pastrami kielbasa pork belly fatback bresaola, bacon pig ham hock turducken rump drumstick shoulder pork loin tail. Porchetta jowl shank corned beef short ribs sausage jerky doner frankfurter ribeye hamburger pork belly. Tenderloin ball tip prosciutto pork turkey ground round filet mignon cow sirloin strip steak. Pork belly drumstick ball tip tenderloin pancetta porchetta jowl ham hock tail shank tri-tip.
+      </p>
+    </div>
+
+    <aside class="right">
+      <div class="sticky-cell">
+        <h3>Sticky content</h3>
+        <p>Some content goes in here</p>
+        <ol>
+           <li>Hey look</li>
+           <li>this content is</li>
+           <li>stuck inside the</li>
+           <li>sticky wrapper</li>
+           <li>using injected classes</li>
+         </ol> 
+      </div>
+    </aside>
+
+    <div style="clear: both;"></div><!-- demo purpose only -->
+
+  </main>
+  <footer>
+  </footer>
+
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="sticky-scroll.js" ></script>
+
+</body>
+</html>
