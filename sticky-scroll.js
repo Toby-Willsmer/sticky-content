@@ -4,13 +4,12 @@
     var stickyClass = ['.sticky-cell', '.sticky-wrapper'],
         stuckClass  = ['stuck-top', 'stuck-lower'],
         scroll      = getCurrentScroll(),
-        $hedHght    = $('header').height(), // or integer
-        $stkHght    = $(stickyClass[0]).outerHeight(),
-        $stkWrp     = $(stickyClass[1]).height();
+        $hedHght    = $('header').height(), // add more here if needed e.g ' + $('element').height()'
+        $heights    = $(stickyClass[1]).height() - $(stickyClass[0]).outerHeight() + $hedHght;
 
     if(scroll >= $hedHght) {
       $(stickyClass[0]).addClass(stuckClass[0]);
-      if(scroll >= $stkWrp - $stkHght + $hedHght) { //$hedHeight is the header offset
+      if(scroll >= $heights) {
         $(stickyClass[0]).removeClass(stuckClass[0]).addClass(stuckClass[1]);
       } else {
         $(stickyClass[0]).removeClass(stuckClass[1]).addClass(stuckClass[0]);
